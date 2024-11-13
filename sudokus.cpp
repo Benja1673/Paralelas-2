@@ -12,8 +12,7 @@
 
 #include "sudokus.h"
 
-
-// Función para inicializar un tablero con memoria dinámica
+// Función para inicializar un tablero con memoria dinámica a partir de un vector
 int** initializeBoard(const std::vector<std::vector<int>>& initialBoard) {
     int size = initialBoard.size();
     int** board = new int* [size];
@@ -33,7 +32,6 @@ void freeBoard(int** board, int size) {
     }
     delete[] board;
 }
-
 // Función para imprimir el tablero de Sudoku
 void printBoard(int** board, int size) {
     std::cout << "{" << std::endl;

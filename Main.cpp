@@ -22,7 +22,7 @@ using namespace std;
 
 
 void menuPrincipal();
-std::mutex mtx;
+
 // Cambiado a std::mutex para evitar ambigüedad
 
 const int NUM_HILOS = 8;
@@ -37,17 +37,17 @@ void resolver25x25() {
     resolverSudoku(board25x25_dificultad_media);
 }
 void resolver25x25p() {
-    resolverSudokuMasterSlave(board25x25_dificultad_media);
+    resolverSudokuConHilos(board25x25_dificultad_media);
 }
 
 
 
 // Llamada a la función `resolverSudoku` pasando el objeto `board16x16_dificultad_media`
 void resolver16x16() {
-    resolverSudoku(board16x16_dificultad_media);
+    resolverSudokuConHilos(board16x16_dificultad_media);
 }
 void resolver16x16p() {
-    resolverSudokuMasterSlave(board16x16_dificultad_media);
+    resolverSudokuConHilos(board16x16_dificultad_media);
 }
 
 
@@ -57,7 +57,7 @@ void resolver9x9() {
     resolverSudoku(board9x9_dificultad_media);
 }
 void resolver9x9p() {
-    resolverSudokuMasterSlave(board9x9_dificultad_media);
+    resolverSudokuConHilos(board9x9_dificultad_media);
 }
 
 
@@ -126,6 +126,7 @@ void menuPrincipal() {
             switch (opcionSudoku) {
             case 1:
                 resolver9x9p();
+                
          
                 break;
             case 2:
