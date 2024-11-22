@@ -44,7 +44,7 @@ void resolver25x25p() {
 
 // Llamada a la función `resolverSudoku` pasando el objeto `board16x16_dificultad_media`
 void resolver16x16() {
-    resolverSudokuConHilos(board16x16_dificultad_media);
+    resolverSudoku(board16x16_dificultad_media);
 }
 void resolver16x16p() {
     resolverSudokuConHilos(board16x16_dificultad_media);

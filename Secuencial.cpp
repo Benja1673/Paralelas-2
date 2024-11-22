@@ -124,6 +124,9 @@ void resolverSudoku(const std::vector<std::vector<int>>& initialBoard) {
         int seconds = (duration_ms % 60000) / 1000;
         int milliseconds = duration_ms % 1000;
 
+
+       
+        printBoard(board, size);
         std::cout << "Sudoku resuelto exitosamente en ";
         if (hours > 0) {
             std::cout << hours << " horas, " << minutes << " minutos, " << seconds << " segundos y " << milliseconds << " milisegundos." << std::endl;
@@ -137,7 +140,6 @@ void resolverSudoku(const std::vector<std::vector<int>>& initialBoard) {
         else {
             std::cout << milliseconds << " milisegundos." << std::endl;
         }
-        printBoard(board, size);
     }
     else {
         std::cout << "No se pudo resolver el Sudoku." << std::endl;
