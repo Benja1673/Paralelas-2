@@ -43,7 +43,7 @@ void resolverSudokuConHilos(std::vector<std::vector<int>>& initialBoard);
 
 
 
-
+void controlarHilos(int** board, int dimension);  // Declaración de la función
 void manejarHilosConValidacion(int** board, int dimension, bool* filasResueltas);
 bool validarFila(int** board, int fila, int dimension);
 // Función para verificar si es seguro colocar un número en una casilla específica
